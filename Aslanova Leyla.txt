@@ -1,0 +1,275 @@
+﻿Sprint_3b_task
+
+
+1) salam adlı funksiya yaradın ki, heç bir arqument almadan sadəcə "Salam, Dünya!" çap etsin.
+
+def salam():
+    print("Salam, Dünya!")
+
+2) kub_hesabla adlı funksiya yaradın ki, bir rəqəm (n) qəbul etsin və onun kubunu qaytarsın.
+
+def kub_hesabla(n):
+    return n ** 3
+
+3) birlesdir adlı funksiya yaradın ki, iki söz qəbul etsin və onları boşluqla birləşdirib qaytarsın.
+
+def birlesdir(soz1, soz2):
+    return f"{soz1} {soz2}"
+
+4) cap_et adlı funksiya yaradın ki, bir listi arqument olaraq alsın və listin hər elementini for ilə çap etsin.
+
+def cap_et(lst):
+    for element in lst:
+        print(element)
+
+5) toplam adlı funksiya yaradın ki, istənilən sayda rəqəmi (*args) qəbul edib onların cəmini qaytarsın.
+
+def toplam(*args):
+    return sum(args)
+
+6) ortalama adlı funksiya yaradın ki, istənilən sayda rəqəmi (*args) qəbul edib onların ortalamasını qaytarsın (əgər heç bir rəqəm yoxdursa, "Rəqəm yoxdur" qaytarsın).
+
+def ortalama(*args):
+    if len(args) == 0:
+        return "Rəqəm yoxdur"
+    return sum(args) / len(args)
+
+7) adlar_rəqəmlər adlı funksiya yaradın ki, istənilən sayda ad və rəqəm cütünü (**kwargs) qəbul edib hər cütü çap etsin (məsələn, "ad: bir, rəqəm: 1").
+
+def adlar_reqemler(**kwargs):
+    for ad, reqem in kwargs.items():
+        print(f"ad: {ad}, rəqəm: {reqem}")
+
+8) tip_yoxla adlı funksiya yaradın ki, bir dəyər qəbul edib onun tipini yoxlasın: "mətn", "rəqəm", "başqa" çap etsin.
+
+def tip_yoxla(deyer):
+    if isinstance(deyer, str):
+        print("mətn")
+    elif isinstance(deyer, (int, float)):
+        print("rəqəm")
+    else:
+        print("başqa")
+
+9) yas_kateqoriya adlı funksiya yaradın ki, input()/readline() ilə yaş soruşsun, 18-dən aşağıysa "Gənc", yuxarıdrsa "Yetkin" çap etsin.
+
+def yas_kateqoriya():
+    yas = int(input("Yaşınızı daxil edin: "))
+    if yas < 18:
+        print("Gənc")
+    else:
+        print("Yetkin")
+
+10) soz_uzunluq adlı funksiya yaradın ki, input()/readline() ilə istifadəçidən söz alsın və onun uzunluğunu çap etsin.
+
+def soz_uzunluq():
+    soz = input("Bir söz daxil edin: ")
+    print(len(soz))
+
+**
+Sprint_3a_task
+
+
+1) x dəyişəni verilmişdir. Əgər x > 0 olarsa "müsbət", x < 0 olarsa "mənfi", bərabərdirsə "sıfır" çap etsin.
+
+x = 5  # Nümunə dəyər
+if x > 0:
+    print("müsbət")
+elif x < 0:
+    print("mənfi")
+else:
+    print("sıfır")
+
+2) n rəqəmi cütdürsə "cüt", təkdirsə "tək" çap etsin.
+
+n = 4  # Nümunə dəyər
+if n % 2 == 0:
+    print("cüt")
+else:
+    print("tək")
+
+3) a, b, c rəqəmləri verilmişdir. Ən böyük rəqəmi çap etsin.
+
+a, b, c = 5, 9, 2  # Nümunə dəyərlər
+print(max(a, b, c))
+
+4) day dəyişəni 1-7 arası rəqəmdir. Müvafiq həftə gününü (1 = "Bazar ertəsi", ..., 7 = "Bazar") çap etsin, əks halda "Yanlış gün" yazsın.
+
+day = 3  # Nümunə dəyər
+if day == 1:
+    print("Bazar ertəsi")
+elif day == 2:
+    print("Çərşənbə axşamı")
+elif day == 3:
+    print("Çərşənbə")
+elif day == 4:
+    print("Cümə axşamı")
+elif day == 5:
+    print("Cümə")
+elif day == 6:
+    print("Şənbə")
+elif day == 7:
+    print("Bazar")
+else:
+    print("Yanlış gün")
+
+5) temp dəyişəni temperaturdur. Əgər temp < 0 olarsa "soyuq", 0-20 arası olarsa "normal", 20-dən böyükdürsə "isti" çap etsin.
+
+temp = 15 
+if temp < 0:
+    print("soyuq")
+elif 0 <= temp <= 20:
+    print("normal")
+else:
+    print("isti")
+
+6) password adlı string verilmişdir. Əgər uzunluğu 8-dən kiçikdirsə "qısa", 8-12 arasıdırsa "orta", 12-dən böyükdürsə "uzun" çap etsin.
+
+password = "mypassword123" 
+length = len(password)
+if length < 8:
+    print("qısa")
+elif 8 <= length <= 12:
+    print("orta")
+else:
+    print("uzun")
+
+7) x rəqəmi həm 3-ə, həm də 5-ə bölünürsə "3 və 5", yalnız 3-ə bölünürsə "3", yalnız 5-ə bölünürsə "5", heç birinə bölünmürsə "heç biri" çap etsin.
+
+x = 15  # Nümunə dəyər
+if x % 3 == 0 and x % 5 == 0:
+    print("3 və 5")
+elif x % 3 == 0:
+    print("3")
+elif x % 5 == 0:
+    print("5")
+else:
+    print("heç biri")
+
+8) 0-dan 20-yə qədər cüt rəqəmləri çap etsin.
+
+for i in range(0, 21, 2):
+    print(i)
+
+9) "Bağda ərik var idi …" stringinin hər elementini for ilə ayrı-ayrılıqda çap edin.
+
+s = "Bağda ərik var idi …"
+for char in s:
+    print(char)
+
+10) 1-dən 10-a qədər rəqəmləri çap edin, amma 3 xaric.
+
+for i in range(1, 11):
+    if i == 3:
+        continue
+    print(i)
+
+11) 1-dən başlayaraq ilk 5-ə bölünən rəqəmi tapın və while ilə çap edin (break istifadə edin).
+
+num = 1
+while True:
+    if num % 5 == 0:
+        print(num)
+        break
+    num += 1
+
+12) (1, 3, 5, 7, 9) listində/vectorunda 5-i tapın və indeksini çap edin (break istifadə edin).
+
+numbers = [1, 3, 5, 7, 9]
+for index, num in enumerate(numbers):
+    if num == 5:
+        print(f"5 rəqəminin indeksi: {index}")
+        break
+
+
+
+***
+Sprint_4a_task
+
+
+1) İstifadəçidən iki rəqəm və bir əməliyyat (toplama, çıxma, vurma, bölmə) daxil etməsini tələb edən funksiya yazın. Mümkün xətaları (ValueError, TypeError və s.) idarə edin və müvafiq mesajlar çıxarın. Sonda da "Hesablama bitdi" mesajı çap olunsun.
+
+def kalkulyator():
+    try:
+        num1 = float(input("Birinci rəqəmi daxil edin: "))
+        num2 = float(input("İkinci rəqəmi daxil edin: "))
+        operation = input("Əməliyyatı daxil edin (+, -, *, /): ")
+        
+        if operation == '+':
+            print(f"Nəticə: {num1 + num2}")
+        elif operation == '-':
+            print(f"Nəticə: {num1 - num2}")
+        elif operation == '*':
+            print(f"Nəticə: {num1 * num2}")
+        elif operation == '/':
+            print(f"Nəticə: {num1 / num2}")
+        else:
+            print("Yanlış əməliyyat!")
+    except ValueError:
+        print("Xəta: Rəqəm daxil edin!")
+    except ZeroDivisionError:
+        print("Xəta: Sıfıra bölmə!")
+    except Exception as e:
+        print(f"Gözlənilməz xəta: {e}")
+    finally:
+        print("Hesablama bitdi")
+
+kalkulyator()
+
+2) 1-dən 50-yə qədər olan rəqəmlərdən yalnız 11ə qalıqsız bölünənlərini list olaraq qaytarın.
+
+bolunenler = [x for x in range(1, 51) if x % 11 == 0]
+print(bolunenler)
+
+3) Verilmiş sözlər siyahısından (["kitab", "qələm", "defter", "silgi"]) hər sözün ilk hərfini list olaraq qaytarın.
+
+sozler = ["kitab", "qələm", "defter", "silgi"]
+ilk_herfler = [soz[0] for soz in sozler]
+print(ilk_herfler)
+
+4) Şəhər adları (["Bakı", "Gəncə", "Sumqayıt"]) və kodları ([12, 22, 18]) siyahılarından {şəhər: kod} dictionary olaraq qaytarın.
+
+seherler = ["Bakı", "Gəncə", "Sumqayıt"]
+kodlar = [12, 22, 18]
+seher_kod = dict(zip(seherler, kodlar))
+print(seher_kod)
+
+5) Kilometri milə çevirən (mil = km * 0.621371) lambda funksiyası yazın və 5 fərqli dəyər üçün yoxlayın.
+
+km_to_mile = lambda km: km * 0.621371
+test_deyerleri = [1, 5, 10, 42.195, 100]
+for km in test_deyerleri:
+    print(f"{km} km = {km_to_mile(km):.2f} mil")
+
+6) [100, 200, 300, 400] qiymətlərinə 18% vergi əlavə etmək üçün map() və lambda istifadə edin.
+
+qiymetler = [100, 200, 300, 400]
+vergili_qiymetler = list(map(lambda x: x * 1.18, qiymetler))
+print(vergili_qiymetler)
+
+7) [3, 7, 12] və [2, 4, 6] siyahılarının elementlərini ikiqat artırmaq və sonra cəmləmək üçün map() istifadə edin.
+
+list1 = [3, 7, 12]
+list2 = [2, 4, 6]
+netice = list(map(lambda x, y: (x*2) + (y*2), list1, list2))
+print(netice)
+
+
+8) [150, 80, 220, 45] siyahısından ən kiçik qiyməti reduce() ilə tapın.
+
+from functools import reduce
+
+qiymetler = [150, 80, 220, 45]
+minimum = reduce(lambda x, y: x if x < y else y, qiymetler)
+print(f"Ən kiçik qiymət: {minimum}")
+
+
+
+
+
+
+
+
+
+
+
+
